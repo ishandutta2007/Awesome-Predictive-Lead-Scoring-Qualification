@@ -1,215 +1,139 @@
-# Awesome-Predictive-Lead-Scoring-Qualification
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Predictive Lead Scoring & Qualification" width="100%" />
+</p>
 
-## Top Predictive Lead Scoring & Qualification Ecosystem
+# 🎯 Awesome Predictive Lead Scoring & Qualification [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Behavioral Signal Detection, AI-Powered Qualification & Self-Hosted Scoring Engines*  
-
-**Last updated: November 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Predictive Lead Scoring & Qualification**. These tools enable revenue teams to identify which leads are most likely to convert, prioritize outreach based on behavioral and firmographic signals, and route sales attention to the highest-value opportunities—turning raw lead lists into ranked, actionable pipelines.
-
-
-
-**Examples** include HubSpot Lead Scoring, MadKudu, 6sense, Demandbase, Leadspace, Breadcrumbs.io, Infer, ZoomInfo Score, Forter, and Salespanel (the category leaders).
-
-
-
-**Open-source emphasis**: Predictive Lead Scoring is a domain where open-source tooling is **genuinely emerging but fragmented across distinct approaches**. The strongest active projects are **Beton** (an open-source, self-hostable MadKudu alternative with LLM-powered autopilot signal detection) , **ai-lead-scoring-engine** (a comprehensive B2B scoring engine with 136 features, tri-dimensional scoring, and local LLM reasoning) , and **looot-score** (a MIT-licensed repo that rebuilds the data half of MadKudu with firmographic and tech-stack rules) . For a complete pipeline with CRM integration, **ai-lead-agent** combines Google Gemini analysis with n8n automation and Airtable storage . The critical caveat: **no open-source project matches MadKudu's model trained on your own closed-won deals**—the commercial platform's predictive power comes from learning your specific conversion patterns, while open-source tools typically use fixed rules or generic LLM analysis . As one open-source rebuild explicitly admits: "Models trained on your own outcomes" is the part it left out .
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-products)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[HubSpot Lead Scoring](https://www.hubspot.com/)**  
-
-  Native lead scoring within HubSpot's Marketing Hub; assigns points based on contact properties and behavioral events (email opens, page views, form submissions) to rank leads for sales follow-up.
-
-
-
-- **[MadKudu](https://www.madkudu.com/)**  
-
-  Predictive lead scoring platform that uses machine learning models trained on your closed-won deals to score leads based on fit, behavior, and product usage. **Starting price around $999/month** . Integrates with CRM and marketing automation to prioritize MQLs and PQLs . **Best for organizations with enough historical data** to train predictive models—but closed-source with opaque scoring and complex setup .
-
-
-
-- **[6sense](https://6sense.com/)**  
-
-  Account-based predictive intelligence with intent data from bidstream and technographic sources; identifies accounts in active buying cycles before they fill out forms.
-
-
-
-- **[Demandbase](https://www.demandbase.com/)**  
-
-  Account-based marketing and predictive scoring platform with intent data, firmographic enrichment, and AI-driven account prioritization.
-
-
-
-- **[Leadspace](https://www.leadspace.com/)**  
-
-  Predictive lead scoring and data enrichment platform; combines third-party data with AI models to score and prioritize leads.
-
-
-
-- **[Breadcrumbs.io](https://breadcrumbs.io/)**  
-
-  Lead scoring platform focused on product-led growth signals; tracks user behavior and scores leads based on fit and engagement.
-
-
-
-- **[Infer](https://www.infer.com/)**  
-
-  Predictive lead scoring platform (now part of Ignite Technologies); uses external signals and firmographic data to score leads.
-
-
-
-- **[ZoomInfo Score](https://www.zoominfo.com/)**  
-
-  Lead and account scoring within ZoomInfo's data platform; combines firmographic, technographic, and intent data to rank opportunities.
-
-
-
-- **[Forter](https://www.forter.com/)**  
-
-  Fraud prevention platform (not lead scoring); included in the search query for context but not relevant to lead qualification.
-
-
-
-- **[Salespanel](https://salespanel.io/)**  
-
-  Lead tracking and scoring platform with website visitor identification, behavioral scoring, and CRM integration.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### AI-Powered Scoring Engines
-
-
-
-- **[Beton](https://www.getbeton.ai/)**  
-
-  Open-source, self-hostable **MadKudu alternative** (AGPLv3) focused on product-led B2B SaaS . Connects your PostHog product analytics to your CRM (Attio, HubSpot, Zoho, Pipedrive) and automatically discovers **behavioral signals**—buying intent, expansion readiness, churn risk—using **LLM-powered autopilot detection** (no manual rules required) . **Key differentiator**: data stays on your infrastructure, no third-party cloud, no per-seat pricing . **Honest limitation**: while it uses LLM-powered detection, it does not train a model on your closed-won deals like MadKudu does—it identifies signals from behavior and firmographics . **Best for product-led SaaS teams** wanting transparent, self-hosted scoring without MadKudu's $999/month price tag .
-
-
-
-- **[ai-lead-scoring-engine](https://github.com/Nikkk2312/ai-lead-scoring-engine)**  
-
-  The most feature-complete open-source **B2B lead scoring engine** available (self-hosted, privacy-first, zero API costs) . Features: **136 features** across **tri-dimensional scoring** (Fit/Engagement/Intent), **buying stage pipeline** (6sense-inspired), **Fit-Engagement matrix** (A1–C3 grid), **local LLM reasoning** for natural-language score explanations, sales feedback loop, **scoring model versioning**, **champion/challenger A/B testing**, **account-based scoring (ABM)**, **Kanban pipeline board**, **workflow automation builder**, **HubSpot/Salesforce/Apollo import templates**, **GDPR data export/deletion**, SLA monitoring, and duplicate detection . Tech: Python, SQLite/PostgreSQL, Docker Compose. **Best for teams wanting a comprehensive, self-hosted scoring platform** with transparency and no per-lead API costs—but it is a newer project and the local LLM reasoning may be less sophisticated than a model trained on your own conversion data .
-
-
-
-- **[looot-score](https://github.com/loootai)**  
-
-  MIT-licensed open-source repo that rebuilds the **data half of MadKudu**—grades leads from firmographics and tech stack with **fixed points per rule** . **Honest disclosure from the author**: "Models trained on your own outcomes" is listed as a feature it left out; rules are "easier to read and worse at surprises" . Quoted cost at list price: **$0.83 to $1.67 per 100 leads** (data API usage). **Best for teams wanting a transparent, inspectable scoring baseline**—but it is rules-based, not predictive machine learning .
-
-
-
-- **[ai-lead-agent](https://github.com/WaltGreenwich/ai-lead-agent)**  
-
-  Open-source **AI lead qualification system** using **Google Gemini** for analysis, FastAPI for the API, **n8n for automation**, and **Airtable for storage** . Extracts from lead messages: **lead score (0–100)** based on buying signals, **priority level** (Hot/Warm/Cold), industry/company size, urgency/buying intent, budget signals, pain points, and recommended actions . Features: React dashboard, RESTful API, Docker Compose deployment . **Best for teams wanting a practical AI-powered qualification pipeline** with CRM automation—but it requires Google Gemini and Airtable API keys, and scoring is LLM-based rather than trained on your conversion data .
-
-
-
-### ML-Based Scoring Models (Research & Prototypes)
-
-
-
-- **[Cuana-E2E](https://github.com/avrtt/Cuana-E2E)**  
-
-  Open-source **end-to-end customer analytics suite** with **XGBoost-based lead scoring**, churn/CLV prediction, and customer segmentation . Features: Python data pipeline (pandas/NumPy), supervised model for lead prioritization, interactive Dash/Plotly dashboard . **Best for data science teams** wanting a reference implementation of ML-based lead scoring alongside broader customer analytics—but it uses **synthetic data** and is a portfolio/freelance project rather than a production platform .
-
-
-
-- **[Kaggle Lead Scoring System (denis911)](https://github.com/denis911/kaggle-lead-scoring-v3-data-analysis-modeling-and-cloud-deployment)**  
-
-  Production-ready **ML pipeline** with XGBoost (~0.88 AUC), FastAPI inference API, and Docker deployment . Trained on a Kaggle CRM dataset; handles categorical data, missing values, and leakage prevention . **Best for ML engineers** wanting a template for training and deploying a lead conversion model—but it is dataset-specific and not a complete qualification platform .
-
-
-
-- **[lead-scoring-kan](https://github.com/jylee0912/lead-scoring-kan)**  
-
-  Research code and datasets for a comparative analysis of **machine learning algorithms for lead scoring** (KAN—Kolmogorov-Arnold Networks) . Published August 2025, Python, active development . **Best for researchers** exploring novel ML architectures for lead scoring—not a production tool.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **growth-tools** — Open-source **automated lead capture** from Reddit, Discord, and GitHub with **hybrid LLM scoring** (0.5 × rule score + 0.5 × LLM intent score) and outreach drafts . **Best for developer-tool companies** wanting to capture leads from developer communities—not a general-purpose lead scoring platform for existing CRM leads .
-
-- **leadEngine** — Open-source **AI-powered lead automation platform** with a Chrome extension for scraping public business data, AI scoring (0–100 with reasons), workflow automation, and CRM integrations . **Best for outbound prospecting** from public data sources—but it is pre-1.0 and focused on lead *discovery* rather than scoring existing leads .
-
-- **Cantrip** — Open-source **GTM lead research and scoring tool** that takes attendee CSVs or GitHub searches, scores leads best-first, and generates outreach drafts . **Best for event follow-up and GitHub-based prospecting**—but it is a CLI/browser tool rather than a CRM-integrated scoring platform .
-
-
-
-**Frameworks for building custom systems**: For **product-led SaaS teams wanting self-hosted MadKudu-style signal detection**, Beton provides the most complete open-source alternative . For a **comprehensive scoring engine with 136 features and local LLM reasoning**, ai-lead-scoring-engine . For a **practical AI qualification pipeline with n8n automation**, ai-lead-agent . For a **transparent rules-based baseline**, looot-score . **No open-source project trains a predictive model on your closed-won deals** like MadKudu does—the predictive moat remains commercial. Choose based on whether you need signal detection (Beton), feature-rich scoring (ai-lead-scoring-engine), or a quick AI pipeline (ai-lead-agent).
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Predictive lead scoring platforms handling lead and behavioral data must comply with applicable privacy regulations (GDPR, CCPA) and data governance policies; **scoring models can encode bias and should be audited for fairness**—especially when trained on historical conversion data that may reflect past discriminatory practices.
-
-- **Open-source predictive lead scoring is emerging but fundamentally limited by the absence of your outcome data**—Beton provides LLM-powered signal detection , and ai-lead-scoring-engine provides feature-rich rules and local LLM reasoning . However, **no open-source project trains a predictive model on your own closed-won deals** like MadKudu does—one open-source rebuild explicitly lists this as a left-out feature . Organizations requiring true predictive scoring trained on their specific conversion patterns should evaluate commercial platforms or invest in custom model development.
-
-- Verify license terms for commercial use; Beton is open-source (AGPLv3) , looot-score is MIT , and ai-lead-scoring-engine is open-source (check repository) .
-
-
+> 🚀 **A comprehensive, SEO-optimized curated directory of enterprise SaaS platforms, AI-driven qualification frameworks, and open-source self-hosted scoring engines.** Master behavioral signal detection, account-based marketing (ABM) prioritization, product-qualified lead (PQL) discovery, and closed-won predictive modeling.
 
 ---
 
+## 📑 Table of Contents
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🏢 Enterprise SaaS Platforms](#-enterprise-saas-platforms)
+- [💻 Open-Source GitHub Projects](#-open-source-github-projects)
+  - [🤖 AI Scoring Engines & GTM Command Frameworks](#-ai-scoring-engines--gtm-command-frameworks)
+  - [🧠 Machine Learning Models & Reference Implementations](#-machine-learning-models--reference-implementations)
+- [🔍 Key Evaluation Criteria & Architecture Comparison](#-key-evaluation-criteria--architecture-comparison)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚖️ Disclaimer & Data Governance](#️-disclaimer--data-governance)
 
+---
 
-**Made for revenue operations leaders, sales analysts, and teams building lead qualification infrastructure.**  
+## 🌐 Sector Overview & Market Dynamics
 
-Let's make predictive lead scoring more open, but with clear eyes about the outcome-data gap that makes true predictive modeling a commercial advantage.
+The global **Predictive Lead Scoring & Sales Analytics** software market is valued at approximately **$2.5 Billion** and is projected to surpass **$7.0 Billion by the mid-2030s**, compounding at an estimated **14.2%–18.5% CAGR**. 
+
+Market competition remains **moderately to highly fragmented** rather than a winner-take-all monopoly: foundational CRM giants (such as HubSpot and Salesforce) bundle standard native scoring modules, while specialized revenue intelligence platforms (such as 6sense, Demandbase, and MadKudu) capture high-value enterprise accounts via proprietary multi-touch intent networks, third-party firmographic enrichment, and machine learning models trained on closed-won pipeline history.
+
+---
+
+## 🏢 Enterprise SaaS Platforms
+
+Below is an overview of top SaaS predictive lead scoring and account qualification platforms, sorted in descending order by company scale (market capitalization, annual revenue, or enterprise valuation):
+
+| Platform | Company Scale (Valuation / Revenue) 🏢 | Pricing (Starting Tier) 💵 | Free Tier / Free Trial Limits 🎁 | Primary Capabilities & Best Use Case 🎯 |
+| :--- | :--- | :--- | :--- | :--- |
+| **[HubSpot](https://www.hubspot.com/)** | **~$28B+ Market Cap** ($2.1B+ Annual Revenue) | **$15/mo** (Starter Customer Platform) / **$800/mo** (Marketing Hub Pro for Predictive Lead Scoring) | **Free Forever Plan** (up to 1,000,000 contacts, basic forms & CRM); **14-day free trial** for Professional/Enterprise tiers | Native predictive lead scoring, automated behavioral event tracking (email clicks, page visits), multi-channel attribution. |
+| **[ZoomInfo](https://www.zoominfo.com/)** | **~$4.5B+ Market Cap** ($1.2B+ Annual Revenue) | **$14,995/year** (~$1,250/mo minimum annual commitment) | **ZoomInfo Lite** (Free forever with Community Edition, 10–25 credits/mo via web extension exchange); sales-coordinated trial | B2B contact intelligence, ZoomInfo Score, firmographic enrichment, technographic profiling, and live buying intent spikes. |
+| **[6sense](https://6sense.com/)** | **$5.2B Valuation** (Late-stage Unicorn) | **$40,000/year** (~$3,333/mo base enterprise deployment) | **Free Plan** (Revenue AI for Sales: 50 free credits/month, prospecting Chrome extension); custom sandbox upon demo | Account-based predictive intelligence, dark funnel intent tracking via bidstream data, buying stage prediction (6QA). |
+| **[Demandbase](https://www.demandbase.com/)** | **$1.0B+ Valuation** ($200M+ Estimated ARR) | **$65,000/year** (Median contract via Vendr; ~$5,400/mo + implementation) | **No Free Plan or Public Trial** (Requires sales discovery, custom demo, and guided proof-of-concept) | End-to-end B2B ABM suite, account intent scores, predictive pipeline engagement, and unified DSP ad targeting. |
+| **[Leadspace](https://www.leadspace.com/)** | **$300M+ Valuation** (Venture / Private Equity Backed) | **$25,000/year** (~$2,080/mo entry contract for unified profiles) | **No Free Plan or Public Trial** (Enterprise proof-of-concept scoping with dedicated sales team) | B2B Customer Data Platform (CDP), AI profile unification, third-party graph enrichment, and fit-predictive scoring. |
+| **[Infer](https://www.infer.com/)** | **$150M+ Historical Valuation** (Ignite Technologies) | **$30,000/year** (~$2,500/mo or Ignite Prime enterprise suite license) | **No Free Plan or Public Trial** (Available via Ignite Unlimited enterprise software license pool) | Pioneering machine learning lead scoring engine, firmographic matching, conversion probability, and CRM lead routing. |
+| **[MadKudu](https://www.madkudu.com/)** | **$60M+ Valuation** (Part of HG Insights) | **$999/month** (Growth plan; ~$33,000 median annual contract) | **No Free Forever Plan**; 14-day guided proof-of-concept pilot available via sales qualification | Predictive scoring models trained directly on your historical closed-won CRM deals; Product-Qualified Lead (PQL) algorithms. |
+| **[Salespanel](https://salespanel.io/)** | **$10M–$25M Valuation** (Privately Held / Bootstrapped) | **$99/month** (Basic plan, up to 2,000 tracked visitors/month) | **14-day full-feature free trial** (No credit card required, covers all visitor tracking & scoring features) | First-party visitor tracking, behavioral score rules, lead temperature tracking, and real-time CRM data synchronization. |
+| **[Breadcrumbs.io](https://breadcrumbs.io/)** | **$5M–$15M Valuation** (Privately Held Startup) | **$790/month** (Pro plan with live CRM bidirectional sync & automated routing) | **Free Forever Plan** ("Breadcrumbs Reveal" tool, analyzes up to 10,000 contacts for ICP directory & exploratory scoring) | Co-dynamic scoring combining demographic/fit and real-time recency/frequency product-usage activity. |
+
+---
+
+## 💻 Open-Source GitHub Projects
+
+Explore the leading self-hosted, MIT/Apache/AGPL licensed predictive lead scoring repositories, sorted in descending order by GitHub Stars ⭐.
+
+### 🤖 AI Scoring Engines & GTM Command Frameworks
+
+| Repository | GitHub Stars 🌟 | Primary Stack 🛠️ | Description & Architectural Highlights ⚡ |
+| :--- | :--- | :--- | :--- |
+| **[Gingiris/growth-tools](https://github.com/Gingiris/growth-tools)** | [![GitHub stars](https://img.shields.io/github/stars/Gingiris/growth-tools?style=social&color=white)](https://github.com/Gingiris/growth-tools/stargazers) | TypeScript, Node.js | Automated inbound/outbound lead acquisition from Reddit, Discord, and GitHub. Employs hybrid LLM scoring (50% deterministic heuristics + 50% LLM intent extraction) with automated personalized outreach drafts. |
+| **[daddydrac/Machine-Learning-For-Predictive-Lead-Scoring](https://github.com/daddydrac/Machine-Learning-For-Predictive-Lead-Scoring)** | [![GitHub stars](https://img.shields.io/github/stars/daddydrac/Machine-Learning-For-Predictive-Lead-Scoring?style=social&color=white)](https://github.com/daddydrac/Machine-Learning-For-Predictive-Lead-Scoring/stargazers) | Python, Scikit-learn, Pandas | Production-tested end-to-end machine learning pipeline for predictive lead scoring. Identifies high-propensity leads, reduces sales cycle duration, and prevents customer churn with supervised classification models. |
+| **[mukulsinghal001/lead-scoring-model-python](https://github.com/mukulsinghal001/lead-scoring-model-python)** | [![GitHub stars](https://img.shields.io/github/stars/mukulsinghal001/lead-scoring-model-python?style=social&color=white)](https://github.com/mukulsinghal001/lead-scoring-model-python/stargazers) | Python, Jupyter, Scikit-learn | Comprehensive lead conversion model utilizing logistic regression, decision trees, and random forests on educational CRM leads with precision/recall optimization and sensitivity tuning. |
+| **[UponRain83246/ai-telegram-business-bot-n8n-resocket](https://github.com/UponRain83246/ai-telegram-business-bot-n8n-resocket)** | [![GitHub stars](https://img.shields.io/github/stars/UponRain83246/ai-telegram-business-bot-n8n-resocket?style=social&color=white)](https://github.com/UponRain83246/ai-telegram-business-bot-n8n-resocket/stargazers) | n8n, Python, Telegram API | Multi-modal automated lead qualification workflow featuring voice/text/image recognition, dual-AI model fallback, budget/timeline parsing, and self-healing CRM sync. |
+| **[KlementMultiverse/ai-crm-agents](https://github.com/KlementMultiverse/ai-crm-agents)** | [![GitHub stars](https://img.shields.io/github/stars/KlementMultiverse/ai-crm-agents?style=social&color=white)](https://github.com/KlementMultiverse/ai-crm-agents/stargazers) | Python, LangChain, FastAPI | Multi-agent autonomous sales CRM architecture with dedicated AI agents for automated lead qualification, email intelligence, meeting booking, and pipeline routing. |
+| **[Othmane-Khadri/gtm-engineer-playbook](https://github.com/Othmane-Khadri/gtm-engineer-playbook)** | [![GitHub stars](https://img.shields.io/github/stars/Othmane-Khadri/gtm-engineer-playbook?style=social&color=white)](https://github.com/Othmane-Khadri/gtm-engineer-playbook/stargazers) | Markdown, Bash, Claude Code | 10 modular sales intelligence skills transforming terminal sessions into a GTM command center: ICP scoring, buying signal monitoring, automated sequence generation, and battlecards. |
+| **[LiChang1125/B2B_Sales_Agent_Skill](https://github.com/LiChang1125/B2B_Sales_Agent_Skill)** | [![GitHub stars](https://img.shields.io/github/stars/LiChang1125/B2B_Sales_Agent_Skill)](https://github.com/LiChang1125/B2B_Sales_Agent_Skill/stargazers) | Python, LLM Orchestration | B2B sales automation skill performing real-time multi-dimensional qualification, enterprise objection handling, product Q&A, and CRM deal-stage updates. |
+| **[LensmorOfficial/trade-show-skills](https://github.com/LensmorOfficial/trade-show-skills)** | [![GitHub stars](https://img.shields.io/github/stars/LensmorOfficial/trade-show-skills?style=social&color=white)](https://github.com/LensmorOfficial/trade-show-skills/stargazers) | Python, Shell, LLM Agents | 15 reusable GTM agent skills built for automated trade show attendee scraping, competitor discovery, budget qualification, and post-conference lead triage. |
+| **[olivierzach/tricentis-lead-scoring](https://github.com/olivierzach/tricentis-lead-scoring)** | [![GitHub stars](https://img.shields.io/github/stars/olivierzach/tricentis-lead-scoring?style=social&color=white)](https://github.com/olivierzach/tricentis-lead-scoring/stargazers) | Python, Scikit-learn, XGBoost | Rigorous lead-scoring data analysis detailing ranking metrics, lift curves, precision-recall trade-offs, and probability calibration for B2B conversions. |
+| **[getbeton/inspector](https://github.com/getbeton/inspector)** | [![GitHub stars](https://img.shields.io/github/stars/getbeton/inspector?style=social&color=white)](https://github.com/getbeton/inspector/stargazers) | TypeScript, Node.js, Next.js | Open-source, privacy-first **MadKudu & Pocus alternative** (AGPLv3). Ingests PostHog behavioral events and synchronizes directly with HubSpot, Attio, and Pipedrive to identify product qualified leads (PQLs). |
+| **[Astoriel/LeadGenius](https://github.com/Astoriel/LeadGenius)** | [![GitHub stars](https://img.shields.io/github/stars/Astoriel/LeadGenius?style=social&color=white)](https://github.com/Astoriel/LeadGenius/stargazers) | Python, Docker, FastAPI | Open-source B2B lead scoring and routing engine. Self-hosted alternative to Clearbit and MadKudu featuring waterfall enrichment, YAML rule configuration, and instant Slack/HubSpot webhooks. |
+| **[calvdee/end-to-end-lead-scoring](https://github.com/calvdee/end-to-end-lead-scoring)** | [![GitHub stars](https://img.shields.io/github/stars/calvdee/end-to-end-lead-scoring?style=social&color=white)](https://github.com/calvdee/end-to-end-lead-scoring/stargazers) | Python, Scikit-learn, MLflow | Enterprise-grade reference implementation demonstrating data preprocessing, categorical feature encoding, logistic/random forest modeling, and model evaluation metrics. |
+| **[eduardocornelsen/full-funnel-ai-analytics](https://github.com/eduardocornelsen/full-funnel-ai-analytics)** | [![GitHub stars](https://img.shields.io/github/stars/eduardocornelsen/full-funnel-ai-analytics?style=social&color=white)](https://github.com/eduardocornelsen/full-funnel-ai-analytics/stargazers) | Python, dbt, DuckDB, XGBoost | Full-funnel AI marketing stack utilizing dbt MetricFlow and MCP. Features multi-warehouse analytics, ad attribution, and integrated XGBoost lead scoring on $0/month open architecture. |
+| **[theaifutureguy/AI-Agent-for-Telephony-voice-bot](https://github.com/theaifutureguy/AI-Agent-for-Telephony-voice-bot)** | [![GitHub stars](https://img.shields.io/github/stars/theaifutureguy/AI-Agent-for-Telephony-voice-bot?style=social&color=white)](https://github.com/theaifutureguy/AI-Agent-for-Telephony-voice-bot/stargazers) | Python, Twilio, OpenAI, WebRTC | Autonomous voice-based telephonic agent for real-time customer discovery, voice questionnaire scoring, appointment booking, and instant CRM qualification. |
+| **[BayramAnnakov/lead-qualification-plugin](https://github.com/BayramAnnakov/lead-qualification-plugin)** | [![GitHub stars](https://img.shields.io/github/stars/BayramAnnakov/lead-qualification-plugin?style=social&color=white)](https://github.com/BayramAnnakov/lead-qualification-plugin/stargazers) | Python, Claude Code Skill | Inbound lead qualification plugin utilizing the Fit + Intent + Timing (FIT) scoring matrix to triage prospective inbound requests inside developer terminals. |
+| **[BookletAI/lead-scoring-demo](https://github.com/BookletAI/lead-scoring-demo)** | [![GitHub stars](https://img.shields.io/github/stars/BookletAI/lead-scoring-demo?style=social&color=white)](https://github.com/BookletAI/lead-scoring-demo/stargazers) | Python, Jupyter, AWS SageMaker | End-to-end cloud lead scoring prototype with Jupyter notebooks, MLflow experiment tracking, and SageMaker model hosting. |
+| **[himanshusaleria/gtm-engine](https://github.com/himanshusaleria/gtm-engine)** | [![GitHub stars](https://img.shields.io/github/stars/himanshusaleria/gtm-engine?style=social&color=white)](https://github.com/himanshusaleria/gtm-engine/stargazers) | Bash, Python, Claude Code | Sales enablement suite for 0-to-1 founders: pipeline progression, conversational call transcription parsing, lead prioritization, and outbound triggers. |
+| **[getcargohq/cargo-skills](https://github.com/getcargohq/cargo-skills)** | [![GitHub stars](https://img.shields.io/github/stars/getcargohq/cargo-skills?style=social&color=white)](https://github.com/getcargohq/cargo-skills/stargazers) | Rust, TypeScript, CLI | GTM agent toolkits connecting to 138 CRM integrations and 50 data providers for waterfall enrichment, intent monitoring, and lead qualification directly from LLMs. |
+| **[SalesforceLabs/LeadScoring](https://github.com/SalesforceLabs/LeadScoring)** | [![GitHub stars](https://img.shields.io/github/stars/SalesforceLabs/LeadScoring?style=social&color=white)](https://github.com/SalesforceLabs/LeadScoring/stargazers) | Apex, Salesforce DX | Official Salesforce Labs package providing configurable declarative and formula-based rules to score inbound leads directly inside Salesforce orgs. |
+| **[hitb1099/outreach-os](https://github.com/hitb1099/outreach-os)** | [![GitHub stars](https://img.shields.io/github/stars/hitb1099/outreach-os?style=social&color=white)](https://github.com/hitb1099/outreach-os/stargazers) | n8n, OpenAI, GLM-4, Python | Autonomous outbound outreach operating system connecting Google Places scraping, AI lead scoring, personalized email drafting, and reply tracking. |
+| **[Nikkk2312/ai-lead-scoring-engine](https://github.com/Nikkk2312/ai-lead-scoring-engine)** | [![GitHub stars](https://img.shields.io/github/stars/Nikkk2312/ai-lead-scoring-engine?style=social&color=white)](https://github.com/Nikkk2312/ai-lead-scoring-engine/stargazers) | Python, FastAPI, Docker | Comprehensive B2B scoring engine: 136 engineered features, tri-dimensional matrix (Fit/Engagement/Intent), 6sense-style buying stages, Kanban pipeline, and local LLM explanation generation. |
+| **[loootai/looot-warm-leads](https://github.com/loootai/looot-warm-leads)** | [![GitHub stars](https://img.shields.io/github/stars/loootai/looot-warm-leads?style=social&color=white)](https://github.com/loootai/looot-warm-leads/stargazers) | Python, TypeScript | Algorithmic listener tracking social, web, and tech-stack change signals to score account warmness and dispatch outbound notifications. |
+| **[loootai/looot-score](https://github.com/loootai/looot-score)** | [![GitHub stars](https://img.shields.io/github/stars/loootai/looot-score?style=social&color=white)](https://github.com/loootai/looot-score/stargazers) | Python, MIT License | Transparent firmographic scoring framework rebuilding the data evaluation layer of MadKudu using explicit rule-weight distributions. |
+| **[WaltGreenwich/ai-lead-agent](https://github.com/WaltGreenwich/ai-lead-agent)** | [![GitHub stars](https://img.shields.io/github/stars/WaltGreenwich/ai-lead-agent?style=social&color=white)](https://github.com/WaltGreenwich/ai-lead-agent/stargazers) | FastAPI, Google Gemini, n8n | AI qualification pipeline using Gemini to parse intent, urgency, budget constraints, and lead category into Airtable and CRM webhooks. |
+
+---
+
+### 🧠 Machine Learning Models & Reference Implementations
+
+| Repository | GitHub Stars 🌟 | Stack 🛠️ | Focus Area 🔬 |
+| :--- | :--- | :--- | :--- |
+| **[avrtt/Cuana-E2E](https://github.com/avrtt/Cuana-E2E)** | [![GitHub stars](https://img.shields.io/github/stars/avrtt/Cuana-E2E?style=social&color=white)](https://github.com/avrtt/Cuana-E2E/stargazers) | Python, XGBoost, Plotly Dash | Full-lifecycle customer intelligence suite covering supervised XGBoost lead scoring, customer lifetime value (CLV) calculation, and churn segmentation. |
+| **[denis911/kaggle-lead-scoring-v3-data-analysis-modeling-and-cloud-deployment](https://github.com/denis911/kaggle-lead-scoring-v3-data-analysis-modeling-and-cloud-deployment)** | [![GitHub stars](https://img.shields.io/github/stars/denis911/kaggle-lead-scoring-v3-data-analysis-modeling-and-cloud-deployment?style=social&color=white)](https://github.com/denis911/kaggle-lead-scoring-v3-data-analysis-modeling-and-cloud-deployment/stargazers) | Python, XGBoost, Docker | End-to-end cloud pipeline deploying a high-accuracy (~0.88 AUC) XGBoost classification inference API with Docker and categorical leakage guards. |
+| **[jylee0912/lead-scoring-kan](https://github.com/jylee0912/lead-scoring-kan)** | [![GitHub stars](https://img.shields.io/github/stars/jylee0912/lead-scoring-kan?style=social&color=white)](https://github.com/jylee0912/lead-scoring-kan/stargazers) | PyTorch, Python | Experimental deep learning research applying Kolmogorov-Arnold Networks (KAN) to lead conversion prediction benchmarked against traditional gradient boosting. |
+
+---
+
+## 🔍 Key Evaluation Criteria & Architecture Comparison
+
+When designing a modern revenue qualification pipeline, organizations typically balance three distinct architectural approaches:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                     Predictive Lead Qualification Spectrum                      │
+├─────────────────────────┬─────────────────────────────┬─────────────────────────┤
+│    Heuristic Rules      │      Proprietary SaaS       │   Self-Hosted AI / ML   │
+│  (HubSpot / Breadcrumbs)│   (MadKudu / 6sense / ZI)   │   (Beton / LeadGenius)  │
+├─────────────────────────┼─────────────────────────────┼─────────────────────────┤
+│ • Deterministic point   │ • Trained on closed-won data│ • Zero per-seat fee     │
+│   additions/subtractions│ • Multi-tenant intent graphs│ • Total data privacy    │
+│ • Highly inspectable    │ • Expensive ($10k-$60k+/yr) │ • LLM signal detection  │
+│ • Brittle to anomalies │ • Opaque black-box models   │ • Requires ML / DevOps  │
+└─────────────────────────┴─────────────────────────────┴─────────────────────────┘
+```
+
+1. **Closed-Won Model Training (Commercial Advantage):** Platforms like **MadKudu** distinguish themselves by training machine learning models on your team's specific closed-won deal patterns. In contrast, open-source platforms largely focus on heuristics, LLM prompts, or synthetic benchmark models.
+2. **Behavioral vs. Firmographic Signals:** Top systems (such as **Beton** and **6sense**) blend behavioral product telemetry (e.g. via PostHog or Segment) with technographic and demographic profiles to prevent false-positive MQLs.
+3. **Data Privacy & GDPR:** Self-hosted open-source stacks (**LeadGenius**, **ai-lead-scoring-engine**) ensure consumer telemetry never exits your self-hosted cloud VPC or Docker infrastructure.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome and actively encouraged!
+
+1. 🍴 **Fork** the repository.
+2. 🌿 **Create** a descriptive branch (`git checkout -b feature/add-new-scoring-engine`).
+3. 📝 **Add/Update** entries in `README.md` keeping formatting consistent (include name, URL, transparent pricing or star badges).
+4. 🚀 **Submit** a pull request with a concise overview of the tool.
+
+---
+
+## ⚖️ Disclaimer & Data Governance
+
+- **Community Maintained:** This repository is an open-source, community-curated directory for research and engineering reference. Mentioning a company or tool does not constitute an endorsement.
+- **Privacy & Compliance:** Processing lead telemetry, scraping public web records, and deploying automated scoring models must adhere strictly to GDPR, CCPA, and regional marketing compliance regulations. Predictive models trained on unweighted historical pipeline data can inherit bias and should undergo continuous algorithmic auditing.
+- **Open-Source Reality:** Always verify software license terms (MIT, AGPLv3, Apache 2.0) before deploying within commercial enterprise revenue operations.
+
+---
+
+<p align="center">
+  <sub>Maintained with ❤️ by the open-source RevOps &amp; Machine Learning community.</sub>
+</p>
