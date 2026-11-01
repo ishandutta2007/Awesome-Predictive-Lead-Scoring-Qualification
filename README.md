@@ -2,7 +2,15 @@
   <img src="assets/banner.svg" alt="Awesome Predictive Lead Scoring & Qualification" width="100%" />
 </p>
 
-# 🎯 Awesome Predictive Lead Scoring & Qualification [![Awesome](https://awesome.re/badge.svg)](https://awesome.re) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+# 🎯 Awesome Predictive Lead Scoring & Qualification
+
+<p align="left">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-bluevioeet?style=flat-square&logo=github" att="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58V"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome" /></a>
+  <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 > 🚀 **A comprehensive, SEO-optimized curated directory of enterprise SaaS platforms, AI-driven qualification frameworks, and open-source self-hosted scoring engines.** Master behavioral signal detection, account-based marketing (ABM) prioritization, product-qualified lead (PQL) discovery, and closed-won predictive modeling.
 
@@ -16,6 +24,8 @@
   - [🧠 Machine Learning Models & Reference Implementations](#-machine-learning-models--reference-implementations)
 - [🔍 Key Evaluation Criteria & Architecture Comparison](#-key-evaluation-criteria--architecture-comparison)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support](#-support)
+- [⭐ Star History](#-star-history)
 - [⚖️ Disclaimer & Data Governance](#️-disclaimer--data-governance)
 
 ---
@@ -123,6 +133,23 @@ Contributions are welcome and actively encouraged!
 2. 🌿 **Create** a descriptive branch (`git checkout -b feature/add-new-scoring-engine`).
 3. 📝 **Add/Update** entries in `README.md` keeping formatting consistent (include name, URL, transparent pricing or star badges).
 4. 🚀 **Submit** a pull request with a concise overview of the tool.
+
+---
+
+## 💖 Support
+
+Thank you for exploring and utilizing this curated directory! If you found this resource helpful for your team, sales research, or AI/RevOps engineering workflows, please consider supporting the project:
+
+- ⭐ **Star this repository** to help others discover it across GitHub.
+- 🍴 **Fork and contribute** new open-source scoring engines, SaaS platforms, or benchmark results.
+- 📢 **Share** with your fellow data scientists, growth engineers, and RevOps peers.
+- ☕ **Buy a coffee / Sponsor**: Support ongoing maintenance and curation on the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Predictive-Lead-Scoring-Qualification&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Predictive-Lead-Scoring-Qualification&type=date&legend=top-left)
 
 ---
 
